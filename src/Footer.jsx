@@ -1,11 +1,12 @@
 import React from "react";
 import "./Styles/Footer.css";
+import pallete from "./assets/color.png";
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section-brand">
-          <img src="./assets/color.png" />
+          <img src={pallete}/>
           <h1>Logendiran's Gallery</h1>
           <p>Expressing creativity through color, canvas.</p>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Styles/Navbar.css';
+import pallete from './assets/color.png';
 function Navbar() {
   const [isOpen,setIsOpen]=useState(false);
   const toggleMenu =()=>{
@@ -9,7 +10,7 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <div className="logo">
-        <img src='./assets/color.png'></img><h1>Logendiran's Gallery</h1>
+        <img src={pallete}></img><h1>Logendiran's Gallery</h1>
       </div>
         <div className="hamburger" onClick={toggleMenu}>
         <span className={`bar ${isOpen ? 'open' : ''}`}></span>
