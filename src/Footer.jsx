@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section-brand">
-          <img src="../src/assets/color-pallete.png" />
+          <img src="./assets/color.png" />
           <h1>Logendiran's Gallery</h1>
           <p>Expressing creativity through color, canvas.</p>
         </div>

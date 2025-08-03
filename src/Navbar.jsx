@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <div className="logo">
-        <img src='../src/assets/color-pallete.png'></img><h1>Logendiran's Gallery</h1>
+        <img src='./assets/color.png'></img><h1>Logendiran's Gallery</h1>
       </div>
         <div className="hamburger" onClick={toggleMenu}>
         <span className={`bar ${isOpen ? 'open' : ''}`}></span>
