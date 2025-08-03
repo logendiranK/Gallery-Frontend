@@ -1,0 +1,56 @@
+.header h1{
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.about-pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 60px;
+}
+.profile-image{
+  width: 380px;
+  height: 380px;
+  border: 2px solid #f9f5f5;
+  border-radius: 2%;
+}
+.about-content {
+  flex: 2;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-pic {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+}
