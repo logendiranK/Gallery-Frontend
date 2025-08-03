@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './artwork.css';
+import './Styles/Artwork.css';
 
 const images = import.meta.glob('/public/artworks/*.{png,jpg,jpeg}', { eager: true });
 

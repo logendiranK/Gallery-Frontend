@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Home from './Home';
 import About from './About';
-import './App.css';
+import './Styles/App.css'; 
 function App() {
   return (
     <Router>

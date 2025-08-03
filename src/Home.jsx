@@ -2,7 +2,7 @@ import React from 'react';
 import Lottie from 'lottie-react';
 import animationData from '../src/painting.json';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './Styles/Home.css';
 
 function Home() {
   return (
