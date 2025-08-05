@@ -1,11 +1,13 @@
 import React from 'react';
 import {  BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import ArtworkGallery from './artwork';
+import ArtworkGallery from './Artwork';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Home from './Home';
 import About from './About';
+import Admin from './Admin';
+import Check from './Check';
 import './Styles/App.css'; 
 function App() {
   return (
@@ -15,8 +17,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/artwork" element={<ArtworkGallery />} />
         <Route path="/about" element={<About/>} />
+        <Route path="/afefwegwerwegwerffgw4erwfgwef" element={<Admin />} />
+        <Route path="/check" element={<Check />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
-       <Footer/>
+      <Footer />
     </Router>
   );
 }

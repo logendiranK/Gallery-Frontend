@@ -1,0 +1,53 @@
+.admin-container {
+  max-width: 500px;
+  margin: 120px auto;
+  padding: 30px 40px;
+  background-color: #fefefe;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-container input[type="file"] {
+  margin: 20px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.admin-btn {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.admin-btn:hover {
+  background-color: #004cc4;
+}
+
+.admin-container p {
+  font-size: 16px;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.admin-container img {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.admin-container img:hover {
+  transform: scale(1.02);
+}

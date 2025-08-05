@@ -71,14 +71,13 @@
 
 
 .artwork-title {
-  padding: 16px;
+  text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1f2937;
-  text-align: center;
-  background-color: #f9fafb;
-  border-top: 1px solid #e5e7eb;
-  text-transform: capitalize;
+  color: #000000;
+  margin: 15px 0;
+  padding: 0 10px;
+  transition: color 0.3s ease;
 }
 @media screen and (max-width: 768px) {
   .gallery-heading {
@@ -91,15 +90,12 @@
 }
 
 @media screen and (max-width: 480px) {
-  .gallery-section {
-    padding: 40px 15px;
-  }
 
   .gallery-heading {
     font-size: 1.8rem;
   }
-
-  .artwork-image {
-    height: 450px;
+  .artwork-grid{
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
+
 }

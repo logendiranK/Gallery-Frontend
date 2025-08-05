@@ -1,49 +1,51 @@
-import React, { useState } from "react";
-import './Styles/Artwork.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./Styles/Artwork.css";
 
-const images = import.meta.glob('/public/artworks/*.{png,jpg,jpeg}', { eager: true });
-
-const artworks = Object.keys(images).map((path) => {
-  const url = path.replace('/public', '');
-  const filename = path.split('/').pop().split('.')[0].replace(/[-_]/g, ' ');
-  return { title: filename, url };
-});
-
-const ArtworkGallery = () => {
+const Artwork = () => {
+  const [artworks, setArtworks] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const openFullscreen = (imageUrl) => {
-    setSelectedImage(imageUrl);
-  };
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/images");
+        setArtworks(res.data);
+      } catch (err) {
+        console.error("Failed to fetch images", err);
+      }
+    };
+    fetchImages();
+  }, []);
 
-  const closeFullscreen = () => {
-    setSelectedImage(null);
-  };
+  const openFullscreen = (url) => setSelectedImage(url);
+  const closeFullscreen = () => setSelectedImage(null);
 
   return (
     <section className="gallery-section">
       <h1 className="gallery-heading">🎨 Artworks</h1>
       <div className="artwork-grid">
-        {artworks.map((art, index) => (
-          <div key={index} className="artwork-card">
+        {artworks.map((art, idx) => (
+          <div key={idx} className="artwork-card">
             <img
               src={art.url}
               alt={art.title}
               className="artwork-image"
               onClick={() => openFullscreen(art.url)}
             />
-            <div className="artwork-title">{art.title}</div>
+            <div className="artwork-title">
+              {(art.name && art.name.replace(/\.[^/.]+$/, "")) || "Untitled"}
+            </div>
           </div>
         ))}
       </div>
-
       {selectedImage && (
         <div className="fullscreen-overlay" onClick={closeFullscreen}>
           <img
             src={selectedImage}
             alt="Fullscreen Artwork"
             className="fullscreen-image"
-            onClick={(e) => e.stopPropagation()} 
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
@@ -51,4 +53,4 @@ const ArtworkGallery = () => {
   );
 };
 
-export default ArtworkGallery;
+export default Artwork;
