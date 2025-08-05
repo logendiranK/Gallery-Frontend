@@ -9,7 +9,7 @@ const Artwork = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/images");
+        const res = await axios.get("https://gallery-backend-1jic.onrender.com/images");
         setArtworks(res.data);
       } catch (err) {
         console.error("Failed to fetch images", err);

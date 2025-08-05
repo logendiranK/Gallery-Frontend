@@ -16,7 +16,7 @@ function Admin() {
     const formData = new FormData();
     formData.append('image', file); 
     try {
-      const res = await axios.post('http://localhost:5000/upload', formData, {
+      const res = await axios.post('https://gallery-backend-1jic.onrender.com/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
