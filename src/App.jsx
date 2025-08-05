@@ -1,7 +1,7 @@
 import React from 'react';
 import {  BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Artwork from './Artwork.jsx';
+import Artwork from './Gallery.jsx';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Home from './Home';
